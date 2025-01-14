@@ -1,0 +1,98 @@
+<h2 mat-dialog-title>Add New Employee</h2>
+<mat-dialog-content class="mat-typography">
+  <form [formGroup]="employeeForm">
+    <!-- First Name and Last Name -->
+    <div class="form-row">
+      <mat-form-field appearance="fill" class="form-field">
+        <mat-label>First Name</mat-label>
+        <input matInput formControlName="firstName" placeholder="Enter first name" />
+        <mat-error *ngIf="employeeForm.get('firstName')?.hasError('required')">
+          First name is required.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="form-field">
+        <mat-label>Last Name</mat-label>
+        <input matInput formControlName="lastName" placeholder="Enter last name" />
+        <mat-error *ngIf="employeeForm.get('lastName')?.hasError('required')">
+          Last name is required.
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <!-- Email -->
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email" placeholder="Enter email" type="email" />
+      <mat-error *ngIf="employeeForm.get('email')?.hasError('required')">
+        Email is required.
+      </mat-error>
+      <mat-error *ngIf="employeeForm.get('email')?.hasError('email')">
+        Enter a valid email.
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Age and Position -->
+    <div class="form-row">
+      <mat-form-field appearance="fill" class="form-field">
+        <mat-label>Age</mat-label>
+        <input matInput type="number" formControlName="age" placeholder="Enter age" />
+        <mat-error *ngIf="employeeForm.get('age')?.hasError('required')">
+          Age is required.
+        </mat-error>
+        <mat-error *ngIf="employeeForm.get('age')?.hasError('min')">
+          Age must be 18 or older.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="form-field">
+        <mat-label>Position</mat-label>
+        <input matInput formControlName="position" placeholder="Enter position" />
+        <mat-error *ngIf="employeeForm.get('position')?.hasError('required')">
+          Position is required.
+        </mat-error>
+        <mat-error *ngIf="employeeForm.get('position')?.hasError('minlength')">
+          Position must be at least 2 characters.
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <!-- Salary and Contact Number -->
+    <div class="form-row">
+      <mat-form-field appearance="fill" class="form-field">
+        <mat-label>Salary</mat-label>
+        <input matInput type="number" formControlName="salary" placeholder="Enter salary" />
+        <mat-error *ngIf="employeeForm.get('salary')?.hasError('required')">
+          Salary is required.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="form-field">
+        <mat-label>Contact Number</mat-label>
+        <input
+          matInput
+          formControlName="contactNumber"
+          placeholder="Enter contact number"
+          type="text"
+        />
+        <mat-error *ngIf="employeeForm.get('contactNumber')?.hasError('required')">
+          Contact number is required.
+        </mat-error>
+        <mat-error *ngIf="employeeForm.get('contactNumber')?.hasError('pattern')">
+          Contact number must be 10 digits.
+        </mat-error>
+      </mat-form-field>
+    </div>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-raised-button mat-dialog-close>Cancel</button>
+  <button
+  mat-raised-button
+
+    [disabled]="employeeForm.invalid"
+    (click)="submit()"
+  >
+    Add Employee
+  </button>
+</mat-dialog-actions>

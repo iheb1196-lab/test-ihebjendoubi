@@ -1,0 +1,35 @@
+
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 0.5rem;
+  }
+  
+  .modal-title {
+    margin: 0;
+    font-size: 1.25rem;
+  }
+  
+  .modal-footer {
+    display: flex;
+    justify-content: end;
+    border-top: 1px solid #dee2e6;
+    padding-top: 0.5rem;
+  }
+  .form-row {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  
+  .form-field {
+    flex: 1;
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  

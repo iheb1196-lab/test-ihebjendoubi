@@ -1,0 +1,67 @@
+.table {
+    margin-top: 20px;
+  }
+  
+  .mat-paginator {
+    margin-top: 10px;
+  }
+  
+  .input-group {
+    margin-bottom: 20px;
+  }
+  
+  button {
+    margin-left: 10px;
+  }
+  .custom-icon {
+    color: #b24f31 !important; 
+  }
+
+
+  .mat-sort-header-arrow {
+    opacity: 1 !important; /* Always show the arrow */
+  }
+  
+  .mat-sort-header-arrow.ng-trigger {
+    transform: rotate(0deg) !important; /* Reset rotation for unsorted state */
+  }
+  .loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height to center the spinner */
+  }
+  
+  .mat-spinner {
+    width: 50px;
+    height: 50px;
+    color: #b24f31 !important;
+  }
+  ::ng-deep .custom-toast {
+    background-color: #f1a68f !important; /* Custom background color */
+    color: white !important; /* Custom text color */
+    border-radius: 8px !important; /* Rounded corners */
+    padding: 24px !important; /* Add padding */
+    font-size: 14px !important; /* Adjust font size */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important; /* Add shadow */
+    min-width: 350px !important; /* Ensure the toast has a minimum width */
+    max-width: 500px !important; /* Optional: Cap the maximum width */
+    
+  }
+  ::ng-deep .custom-title {
+    font-size :16px;
+    border-bottom: 1px solid white;
+    padding: 10px;
+    
+  }
+  ::ng-deep .custom-message {
+    font-size :12px;
+    padding: 10px;
+    margin-top: 20px;
+    
+  }
+  ::ng-deep .custom-dialog-container {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }

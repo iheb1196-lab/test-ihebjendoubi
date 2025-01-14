@@ -1,0 +1,8 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  .toolbar-logo {
+    height: 24px; /* Adjust the height of the logo */
+    width: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure the logo fits within the container */
+  }
